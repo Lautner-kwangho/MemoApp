@@ -49,6 +49,29 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         true
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // 추후 수정 예정 ... 핵졸림
+        if indexPath.section == 0 {
+            let favoriteAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                print("1")
+                success(true)
+            })
+            favoriteAction.image = UIImage(systemName: "pin.slash.fill")
+            favoriteAction.backgroundColor = #colorLiteral(red: 0.996542871, green: 0.6290633082, blue: 0, alpha: 1)
+            
+            return UISwipeActionsConfiguration(actions: [favoriteAction])
+        } else {
+            let favoriteAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                print("1")
+                success(true)
+            })
+            favoriteAction.image = UIImage(systemName: "pin.fill")
+            favoriteAction.backgroundColor = #colorLiteral(red: 0.996542871, green: 0.6290633082, blue: 0, alpha: 1)
+            
+            return UISwipeActionsConfiguration(actions: [favoriteAction])
+        }
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
             if editingStyle == .delete {
