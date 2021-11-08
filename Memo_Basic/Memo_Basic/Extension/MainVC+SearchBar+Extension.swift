@@ -1,0 +1,17 @@
+//
+//  MainVC+SearchBar+Extension.swift
+//  Memo_Basic
+//
+//  Created by 최광호 on 2021/11/08.
+//
+
+import UIKit
+
+extension MainVC: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text?.lowercased() else {return}
+        
+    }
+    
+}

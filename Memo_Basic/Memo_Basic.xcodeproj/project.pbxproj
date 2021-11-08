@@ -9,21 +9,40 @@
 /* Begin PBXBuildFile section */
 		E40D47242739463400020D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D47232739463400020D3D /* AppDelegate.swift */; };
 		E40D47262739463400020D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D47252739463400020D3D /* SceneDelegate.swift */; };
-		E40D47282739463400020D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D47272739463400020D3D /* ViewController.swift */; };
 		E40D472B2739463400020D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40D47292739463400020D3D /* Main.storyboard */; };
 		E40D472D2739463500020D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40D472C2739463500020D3D /* Assets.xcassets */; };
 		E40D47302739463500020D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40D472E2739463500020D3D /* LaunchScreen.storyboard */; };
+		E40D4739273946B600020D3D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E40D4738273946B600020D3D /* IQKeyboardManagerSwift */; };
+		E40D473C2739471400020D3D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E40D473B2739471400020D3D /* Realm */; };
+		E40D473E2739471400020D3D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E40D473D2739471400020D3D /* RealmSwift */; };
+		E40D47432739489100020D3D /* TakingNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40D47422739489100020D3D /* TakingNote.storyboard */; };
+		E40D4745273948D700020D3D /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D4744273948D700020D3D /* NoteVC.swift */; };
+		E40D47472739492C00020D3D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D47462739492C00020D3D /* MainVC.swift */; };
+		E40D474A27394D9300020D3D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D474827394D9300020D3D /* MainTableViewCell.swift */; };
+		E40D474B27394D9300020D3D /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40D474927394D9300020D3D /* MainTableViewCell.xib */; };
+		E40D474F27394FBB00020D3D /* MainVC+Table+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D474E27394FBB00020D3D /* MainVC+Table+Extension.swift */; };
+		E40D4752273954F400020D3D /* MainTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D4751273954F400020D3D /* MainTableViewSection.swift */; };
+		E40D47542739593C00020D3D /* MainVC+SearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D47532739593C00020D3D /* MainVC+SearchBar+Extension.swift */; };
+		E4C722C7273987E900C12C70 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C722C6273987E900C12C70 /* Alert+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E40D47202739463400020D3D /* Memo_Basic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo_Basic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40D47232739463400020D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E40D47252739463400020D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E40D47272739463400020D3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E40D472A2739463400020D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E40D472C2739463500020D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E40D472F2739463500020D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E40D47312739463500020D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E40D47422739489100020D3D /* TakingNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TakingNote.storyboard; sourceTree = "<group>"; };
+		E40D4744273948D700020D3D /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
+		E40D47462739492C00020D3D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		E40D474827394D9300020D3D /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		E40D474927394D9300020D3D /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		E40D474E27394FBB00020D3D /* MainVC+Table+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Table+Extension.swift"; sourceTree = "<group>"; };
+		E40D4751273954F400020D3D /* MainTableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewSection.swift; sourceTree = "<group>"; };
+		E40D47532739593C00020D3D /* MainVC+SearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+SearchBar+Extension.swift"; sourceTree = "<group>"; };
+		E4C722C6273987E900C12C70 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40D473E2739471400020D3D /* RealmSwift in Frameworks */,
+				E40D473C2739471400020D3D /* Realm in Frameworks */,
+				E40D4739273946B600020D3D /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,71 @@
 		E40D47222739463400020D3D /* Memo_Basic */ = {
 			isa = PBXGroup;
 			children = (
-				E40D47232739463400020D3D /* AppDelegate.swift */,
-				E40D47252739463400020D3D /* SceneDelegate.swift */,
-				E40D47272739463400020D3D /* ViewController.swift */,
-				E40D47292739463400020D3D /* Main.storyboard */,
+				E40D4750273954DD00020D3D /* Model */,
+				E40D473F2739475100020D3D /* Storyboard */,
+				E40D47402739476200020D3D /* VC */,
+				E40D47412739477200020D3D /* Extension */,
+				E40D474C27394D9D00020D3D /* Cell */,
+				E40D474D27394DBA00020D3D /* xib */,
 				E40D472C2739463500020D3D /* Assets.xcassets */,
-				E40D472E2739463500020D3D /* LaunchScreen.storyboard */,
 				E40D47312739463500020D3D /* Info.plist */,
+				E40D472E2739463500020D3D /* LaunchScreen.storyboard */,
+				E40D47252739463400020D3D /* SceneDelegate.swift */,
+				E40D47232739463400020D3D /* AppDelegate.swift */,
 			);
 			path = Memo_Basic;
+			sourceTree = "<group>";
+		};
+		E40D473F2739475100020D3D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E40D47292739463400020D3D /* Main.storyboard */,
+				E40D47422739489100020D3D /* TakingNote.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E40D47402739476200020D3D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				E40D47462739492C00020D3D /* MainVC.swift */,
+				E40D4744273948D700020D3D /* NoteVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		E40D47412739477200020D3D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E4C722C6273987E900C12C70 /* Alert+Extension.swift */,
+				E40D474E27394FBB00020D3D /* MainVC+Table+Extension.swift */,
+				E40D47532739593C00020D3D /* MainVC+SearchBar+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E40D474C27394D9D00020D3D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E40D474827394D9300020D3D /* MainTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E40D474D27394DBA00020D3D /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				E40D474927394D9300020D3D /* MainTableViewCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		E40D4750273954DD00020D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E40D4751273954F400020D3D /* MainTableViewSection.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +161,11 @@
 			dependencies = (
 			);
 			name = Memo_Basic;
+			packageProductDependencies = (
+				E40D4738273946B600020D3D /* IQKeyboardManagerSwift */,
+				E40D473B2739471400020D3D /* Realm */,
+				E40D473D2739471400020D3D /* RealmSwift */,
+			);
 			productName = Memo_Basic;
 			productReference = E40D47202739463400020D3D /* Memo_Basic.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +194,10 @@
 				Base,
 			);
 			mainGroup = E40D47172739463400020D3D;
+			packageReferences = (
+				E40D4737273946B600020D3D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				E40D473A2739471400020D3D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = E40D47212739463400020D3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40D47432739489100020D3D /* TakingNote.storyboard in Resources */,
 				E40D47302739463500020D3D /* LaunchScreen.storyboard in Resources */,
+				E40D474B27394D9300020D3D /* MainTableViewCell.xib in Resources */,
 				E40D472D2739463500020D3D /* Assets.xcassets in Resources */,
 				E40D472B2739463400020D3D /* Main.storyboard in Resources */,
 			);
@@ -138,8 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E40D47282739463400020D3D /* ViewController.swift in Sources */,
 				E40D47242739463400020D3D /* AppDelegate.swift in Sources */,
+				E40D4752273954F400020D3D /* MainTableViewSection.swift in Sources */,
+				E40D47472739492C00020D3D /* MainVC.swift in Sources */,
+				E40D474A27394D9300020D3D /* MainTableViewCell.swift in Sources */,
+				E40D4745273948D700020D3D /* NoteVC.swift in Sources */,
+				E40D474F27394FBB00020D3D /* MainVC+Table+Extension.swift in Sources */,
+				E40D47542739593C00020D3D /* MainVC+SearchBar+Extension.swift in Sources */,
+				E4C722C7273987E900C12C70 /* Alert+Extension.swift in Sources */,
 				E40D47262739463400020D3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,6 +387,7 @@
 				DEVELOPMENT_TEAM = J3L38PYNZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Memo_Basic/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "메모";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +416,7 @@
 				DEVELOPMENT_TEAM = J3L38PYNZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Memo_Basic/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "메모";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -360,6 +457,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E40D4737273946B600020D3D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		E40D473A2739471400020D3D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E40D4738273946B600020D3D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E40D4737273946B600020D3D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		E40D473B2739471400020D3D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E40D473A2739471400020D3D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		E40D473D2739471400020D3D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E40D473A2739471400020D3D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E40D47182739463400020D3D /* Project object */;
 }
