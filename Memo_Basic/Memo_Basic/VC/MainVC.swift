@@ -9,16 +9,23 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    static let identifier = "MainVC"
+    
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-        navigationSearchBarSetting()
-        
+        firstStartApp()
+                
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.backgroundColor = .gray
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationSearchBarSetting()
     }
     
     func navigationSearchBarSetting() {

@@ -9,9 +9,12 @@ import UIKit
 
 class NoteVC: UIViewController {
 
+    @IBOutlet weak var editMemoTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        editMemoTableView.delegate = self
+        editMemoTableView.dataSource = self
     }
     
 
