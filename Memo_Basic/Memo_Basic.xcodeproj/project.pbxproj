@@ -28,6 +28,7 @@
 		E413844A273ADDAB00816036 /* NoteVC+Table+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4138449273ADDAB00816036 /* NoteVC+Table+Extension.swift */; };
 		E4631189273AB9960038F06C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4631188273AB9960038F06C /* Storage.swift */; };
 		E463118D273AC88D0038F06C /* MainVC+FirstPage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E463118C273AC88D0038F06C /* MainVC+FirstPage+Extension.swift */; };
+		E4BFACA5273BED3000A78602 /* MainVC+RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFACA4273BED3000A78602 /* MainVC+RealmModel.swift */; };
 		E4C722C7273987E900C12C70 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C722C6273987E900C12C70 /* Alert+Extension.swift */; };
 		E4FA6EDF273AB4840011B3D1 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4FA6EDE273AB4840011B3D1 /* Welcome.storyboard */; };
 		E4FA6EE1273AB7260011B3D1 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA6EE0273AB7260011B3D1 /* WelcomeVC.swift */; };
@@ -54,6 +55,7 @@
 		E4138449273ADDAB00816036 /* NoteVC+Table+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+Table+Extension.swift"; sourceTree = "<group>"; };
 		E4631188273AB9960038F06C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		E463118C273AC88D0038F06C /* MainVC+FirstPage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+FirstPage+Extension.swift"; sourceTree = "<group>"; };
+		E4BFACA4273BED3000A78602 /* MainVC+RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+RealmModel.swift"; sourceTree = "<group>"; };
 		E4C722C6273987E900C12C70 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		E4FA6EDE273AB4840011B3D1 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		E4FA6EE0273AB7260011B3D1 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				E40D4751273954F400020D3D /* MainTableViewSection.swift */,
 				E4631188273AB9960038F06C /* Storage.swift */,
+				E4BFACA4273BED3000A78602 /* MainVC+RealmModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				E413844A273ADDAB00816036 /* NoteVC+Table+Extension.swift in Sources */,
 				E40D474F27394FBB00020D3D /* MainVC+Table+Extension.swift in Sources */,
 				E40D47542739593C00020D3D /* MainVC+SearchBar+Extension.swift in Sources */,
+				E4BFACA5273BED3000A78602 /* MainVC+RealmModel.swift in Sources */,
 				E4C722C7273987E900C12C70 /* Alert+Extension.swift in Sources */,
 				E40D47262739463400020D3D /* SceneDelegate.swift in Sources */,
 			);

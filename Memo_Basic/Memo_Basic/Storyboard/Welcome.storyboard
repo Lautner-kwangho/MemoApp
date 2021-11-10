@@ -18,10 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eA3-EA-hd4">
-                                <rect key="frame" x="50" y="313.5" width="314" height="269"/>
+                                <rect key="frame" x="60" y="313.5" width="294" height="269"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SJ-pl-U74">
-                                        <rect key="frame" x="30" y="208.5" width="254" height="40.5"/>
+                                        <rect key="frame" x="30" y="208.5" width="234" height="40.5"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                         <connections>
@@ -29,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yp-5Y-Wrg">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="208.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="208.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQi-dw-bbK">
                                                 <rect key="frame" x="20" y="20" width="142.5" height="37"/>
@@ -51,8 +52,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다:)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-Q5-k9v">
-                                                <rect key="frame" x="20" y="57" width="122.5" height="37.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-Q5-k9v">
+                                                <rect key="frame" x="20" y="57" width="128" height="37.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -90,12 +91,12 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.8116721854304636" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eA3-EA-hd4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="L4R-Ue-odB"/>
-                            <constraint firstItem="eA3-EA-hd4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="Oxe-RS-Onl"/>
+                            <constraint firstItem="eA3-EA-hd4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="Oxe-RS-Onl"/>
                             <constraint firstItem="eA3-EA-hd4" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Zy1-qR-t80"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eA3-EA-hd4" secondAttribute="trailing" constant="50" id="aVd-bq-ImN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eA3-EA-hd4" secondAttribute="trailing" constant="60" id="aVd-bq-ImN"/>
                             <constraint firstItem="eA3-EA-hd4" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.3" id="dzL-gj-Xax"/>
                         </constraints>
                     </view>
@@ -105,6 +106,8 @@
                         <outletCollection property="welcomeLabelArray" destination="T0E-BX-2v7" collectionClass="NSMutableArray" id="Pg1-wI-i6B"/>
                         <outletCollection property="welcomeLabelArray" destination="KQi-dw-bbK" collectionClass="NSMutableArray" id="k51-k2-TPc"/>
                         <outletCollection property="welcomeLabelArray" destination="Uhr-Q5-k9v" collectionClass="NSMutableArray" id="YgN-lG-8of"/>
+                        <outletCollection property="welcomUIView" destination="8Yp-5Y-Wrg" collectionClass="NSMutableArray" id="Go4-O5-LsV"/>
+                        <outletCollection property="welcomUIView" destination="eA3-EA-hd4" collectionClass="NSMutableArray" id="uDs-gl-85T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,6 +118,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

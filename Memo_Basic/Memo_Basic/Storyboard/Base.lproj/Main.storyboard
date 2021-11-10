@@ -57,6 +57,7 @@
                     <navigationItem key="navigationItem" id="9Cx-rO-xqN"/>
                     <connections>
                         <outlet property="mainTableView" destination="1vR-VX-W05" id="13H-TP-JAy"/>
+                        <outlet property="mainToolBar" destination="dRj-U2-ibu" id="YjI-oM-6Hs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

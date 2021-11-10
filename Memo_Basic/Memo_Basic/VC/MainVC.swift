@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainVC: UIViewController {
 
     static let identifier = "MainVC"
+    let localRealm = try! Realm()
+    var tasks: Results<RealmModel>!
     
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var mainToolBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +23,23 @@ class MainVC: UIViewController {
                 
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        mainTableView.backgroundColor = .gray
+        
+        // Realm 관리
+        tasks = localRealm.objects(RealmModel.self)
+        print("\(localRealm.configuration.fileURL!)")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        colorUISetting()
         navigationSearchBarSetting()
+    }
+    
+    func colorUISetting() {
+        mainTableView.backgroundColor = .black
+        mainToolBar.backgroundColor = .black
+        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1058690324, green: 0.1058908626, blue: 0.1058642492, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     func navigationSearchBarSetting() {

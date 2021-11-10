@@ -26,8 +26,19 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         return UIScreen.main.bounds.height / 15
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "TakingNote", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: NoteVC.identifier) as! NoteVC
+        
+        vc.tableView = tableView
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        let favoriteTasks = tasks.filter("favorite = true")
+        let nonFavoriteTasks = tasks.filter("favorite = false")
+        return section == 0 ? favoriteTasks.count : nonFavoriteTasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,12 +48,16 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else {
             return MainTableViewCell()
         }
-        
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height / 11
+        if indexPath.section == 0 {
+            return 0
+        } else {
+            return UIScreen.main.bounds.height / 15
+        }
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {

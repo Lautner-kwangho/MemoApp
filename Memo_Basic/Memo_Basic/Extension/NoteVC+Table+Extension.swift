@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NoteTableDelegate {
+    
+}
+
 extension NoteVC: UITableViewDelegate, UITableViewDataSource, NoteCellDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -18,6 +22,7 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource, NoteCellDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // 생각남! 1 섹션은 그냥 오토로 해주고 2섹션은 1+스크롤로 ㅋㅋㅋㅋ 간단하게 ㄱ
         return UITableView.automaticDimension
     }
     
@@ -29,14 +34,20 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource, NoteCellDelegate {
             return NoteTableViewCell()
         }
         cell.delegate = self
-        cell.noteConfigure(tableView, indexPath: indexPath)
+        if indexPath.section == 0 {
+            cell.memoContent.font = UIFont.boldSystemFont(ofSize: 30)
+        } else {
+            cell.memoContent.font = UIFont.systemFont(ofSize: 18)
+        }
+//        cell.noteConfigure(tableView, indexPath: indexPath)
+        
         
         return cell
     }
     
     func updateTextViewHeight(_ cell: NoteTableViewCell, _ textView: UITextView) {
         let size = textView.bounds.size
-        let updateSize = editMemoTableView.sizeThatFits(CGSize(width: size.width, height: size.height))
+        let updateSize = editMemoTableView.sizeThatFits(CGSize(width: size.width, height: CGFloat.greatestFiniteMagnitude))
         if size.height != updateSize.height {
             UIView.setAnimationsEnabled(false)
             editMemoTableView.beginUpdates()
