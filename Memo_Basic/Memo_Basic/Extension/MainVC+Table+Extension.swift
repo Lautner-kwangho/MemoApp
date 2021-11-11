@@ -14,15 +14,28 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let title = MainTableViewSection.allCases[section].description
         let text = UILabel()
         text.text = title
         text.font = UIFont.boldSystemFont(ofSize: 25)
         
+        if tasks.filter("favorite = true").count == 0 {
+            if section == 0 {
+                text.isHidden = true
+            }
+        }
         return text
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        if tasks.filter("favorite = true").count == 0 {
+            if section == 0 {
+                return 0 
+            }
+        }
         return UIScreen.main.bounds.height / 15
     }
     
@@ -30,7 +43,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "TakingNote", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: NoteVC.identifier) as! NoteVC
         
-        vc.tableView = tableView
+        vc.mainRealm = tasks[indexPath.row]
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -48,16 +61,15 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else {
             return MainTableViewCell()
         }
-
+        let row = tasks[indexPath.row]
+        cell.memoTitle.text = row.title
+        cell.memoContent.text = row.content
+        cell.registrationDate.text = DateFormatter.customFormatter.string(from: row.registDate)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 0
-        } else {
-            return UIScreen.main.bounds.height / 15
-        }
+        return UIScreen.main.bounds.height / 15
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -88,9 +100,11 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let row = tasks[indexPath.row]
         if indexPath.section == 1 {
-            if editingStyle == .delete {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+            try! localRealm.write {
+                localRealm.delete(row)
+                tableView.reloadData()
             }
                 
         }

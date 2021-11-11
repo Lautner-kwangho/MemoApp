@@ -33,6 +33,7 @@ class MainVC: UIViewController {
         super.viewWillAppear(animated)
         colorUISetting()
         navigationSearchBarSetting()
+        self.mainTableView.reloadData()
     }
     
     func colorUISetting() {
@@ -52,9 +53,8 @@ class MainVC: UIViewController {
         
         // View로 custom 하면 세부적으로 건드릴 수 있는데 999,999개 정도면 음 자서전인데?정규식 통해서 해결하고자 함
         
-        self.navigationItem.title = "0000개의 메모"
-        self.navigationItem.hidesSearchBarWhenScrolling = false
-        //self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationItem.title = "\(tasks.count)개의 메모"
+        self.navigationItem.hidesSearchBarWhenScrolling = true
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 

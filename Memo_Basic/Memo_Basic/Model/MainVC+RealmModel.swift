@@ -10,12 +10,12 @@ import RealmSwift
 
 class RealmModel: Object {
     @Persisted var title: String
-    @Persisted var content: String?
+    @Persisted var content: String
     @Persisted var registDate = Date()
     @Persisted var favorite: Bool
     @Persisted(primaryKey: true) var _id: ObjectId
     
-    convenience init(title: String, content: String?, registDate: Date) {
+    convenience init(title: String, content: String, registDate: Date) {
         self.init()
         self.title = title
         self.content = content
