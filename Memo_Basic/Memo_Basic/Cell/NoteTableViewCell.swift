@@ -54,7 +54,10 @@ class NoteTableViewCell: UITableViewCell {
                 memoContent.text = realm.content
             } else if memoContent.text != realm.content {
                 cellTextViewContent = memoContent.text
-                self.delegate?.sendContent(noteContentDelegate: cellTextViewContent)
+                self.delegate?.sendTitle(noteTitleDelegate: cellTextViewContent)
+            } else if memoContent.text == realm.content {
+                cellTextViewContent = memoContent.text
+                self.delegate?.sendTitle(noteTitleDelegate: cellTextViewContent)
             }
         }
     }

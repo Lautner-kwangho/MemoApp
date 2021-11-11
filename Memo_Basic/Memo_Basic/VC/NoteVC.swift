@@ -22,6 +22,9 @@ class NoteVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        noteTitle = mainRealm?.title ?? ""
+        noteContent = mainRealm?.content ?? ""
+        
         editMemoTableView.delegate = self
         editMemoTableView.dataSource = self
 
@@ -39,14 +42,10 @@ class NoteVC: UIViewController {
     @objc func saveData() {
         let task = RealmModel(title: noteTitle, content: noteContent, registDate: Date())
         if mainRealm != nil {
-            print("1")
             try! localRealm.write {
                 mainRealm?.title = noteTitle
                 mainRealm?.content = noteContent
             }
-//        } else if mainRealm == mainRealm {
-//            print("2")
-//            self.navigationController?.popViewController(animated: true)
         } else {
             try! localRealm.write {
                 localRealm.add(task)
