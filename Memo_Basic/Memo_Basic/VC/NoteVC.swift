@@ -34,9 +34,26 @@ class NoteVC: UIViewController {
     func navigationSetting() {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         
+        let activity = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(activityVC))
+        activity.tintColor = .orange
         let okButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(saveData))
         okButton.tintColor = .orange
-        self.navigationItem.rightBarButtonItem = okButton
+//        UIActivityViewController
+        
+        self.navigationItem.rightBarButtonItems = [okButton, activity]
+        
+        let backButton = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: #selector(popAction))
+        backButton.tintColor = .orange
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func activityVC() {
+        let vc = UIActivityViewController(activityItems: [], applicationActivities: [])
+        self.present(vc, animated: true)
+    }
+    
+    @objc func popAction() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func saveData() {

@@ -10,8 +10,12 @@ import UIKit
 extension MainVC: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text?.lowercased() else {return}
+        guard let text = searchController.searchBar.text else {return}
+        let filter = self.tasks.filter { $0.title.lowercased().hasPrefix(text) }
+        filterTask = filter
         
+        dump(filterTask)
+        self.mainTableView.reloadData()
     }
     
 }

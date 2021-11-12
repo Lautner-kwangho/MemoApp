@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UILabel.appearance().textColor = .white
         IQKeyboardManager.shared.enable = true
-        
+
         return true
     }
 

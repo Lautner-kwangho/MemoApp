@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainTableViewCell: UITableViewCell {
 
@@ -13,8 +14,7 @@ class MainTableViewCell: UITableViewCell {
     
     @IBOutlet weak var memoTitle: UILabel!
     @IBOutlet weak var registrationDate: UILabel!
-    @IBOutlet weak var memoContent: UILabel!
-
+    @IBOutlet weak var memoContent: UILabel!    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

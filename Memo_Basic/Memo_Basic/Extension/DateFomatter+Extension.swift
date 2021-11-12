@@ -8,19 +8,25 @@
 import Foundation
 
 extension DateFormatter {
+    
     static var customFormatter: DateFormatter {
-        let date = Date()
-        
-        //    let yesterDay =
-//        let yesterDay = Calendar.
-        
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
         dateFormatter.dateFormat = "yyyy.MM.dd aa hh:mm"
-        
-//        dateFormatter.dateFormat = "E"
-        
-//        dateFormatter.dateFormat = "aa hh:mm"
-        
+        return dateFormatter
+    }
+    
+    static var yesterdayFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateFormat = "aa hh:mm"
+        return dateFormatter
+    }
+    
+    static var weeklyFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateFormat = "E"
         return dateFormatter
     }
 
