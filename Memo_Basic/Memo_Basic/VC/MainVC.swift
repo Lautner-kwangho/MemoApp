@@ -69,10 +69,9 @@ class MainVC: UIViewController {
             textfield.backgroundColor = UIColor.white
         }
         
+        let result = NumberFormatter.customFormatter.string(for: tasks.count)!
         
-        // View로 custom 하면 세부적으로 건드릴 수 있는데 999,999개 정도면 음 자서전인데?정규식 통해서 해결하고자 함
-        
-        self.navigationItem.title = "\(tasks.count)개의 메모"
+        self.navigationItem.title = "\(result)개의 메모"
         self.navigationItem.hidesSearchBarWhenScrolling = true
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
