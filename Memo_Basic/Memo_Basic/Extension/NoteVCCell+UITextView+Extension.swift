@@ -14,26 +14,21 @@ extension NoteTableViewCell: UITextViewDelegate {
             delegate.updateTextViewHeight(self, memoContent)
         }
     }
+    
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
-//        if memoContent.text == "내용을 입력하세요" {
-//            memoContent.text = ""
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        
+//        if(textField.isEqual(self.memoContent.tag)){
+//            self.memoContent.becomeFirstResponder()
+//            컨텐츠필드로 포커스 이동
 //        }
-    }
+//        return true
+//    }
+    
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         true
     }
     func textViewDidEndEditing(_ textView: UITextView) {
-//        if memoContent.text == "" {
-//            memoContent.text = "내용을 입력하세요"
-//            memoContent.textColor = .systemGray3
-//        } else {
-//            memoContent.textColor = .white
-//        }
-//        if memoContent.text == "" {
-//            memoContent.text = "내용을 입력하세요"
-//        } else  {
-            noteTableView?.reloadData()
-//        }
+        noteTableView?.reloadData()
     }
 }

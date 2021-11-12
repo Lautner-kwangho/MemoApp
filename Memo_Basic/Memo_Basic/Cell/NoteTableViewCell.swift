@@ -65,6 +65,7 @@ class NoteTableViewCell: UITableViewCell {
     func noteConfigure(_ tableView: UITableView, indexPath: IndexPath) {
 
         if indexPath.row == 0 {
+            memoContent.becomeFirstResponder()
             memoContent.font = UIFont.boldSystemFont(ofSize: 30)
             cellTextViewTitle = memoContent.text
             self.delegate?.sendTitle(noteTitleDelegate: cellTextViewTitle)
@@ -80,7 +81,6 @@ class NoteTableViewCell: UITableViewCell {
         memoContent.delegate = self
         memoContent.isScrollEnabled = false
         memoContent.sizeToFit()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

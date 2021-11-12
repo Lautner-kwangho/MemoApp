@@ -51,7 +51,7 @@ class NoteVC: UIViewController {
         let vc = UIActivityViewController(activityItems: [], applicationActivities: [])
         self.present(vc, animated: true)
     }
-    
+
     @objc func popAction() {
         self.navigationController?.popViewController(animated: true)
     }

@@ -84,12 +84,22 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         
 //        let filter = filterTask[indexPath.rowcell.memoTitle.text]
         if self.isFiltering {
+//            cell.memoTitle.text = filterTask
 //            cell.memoTitle.text = filterTask[indexPath]
 //            cell.memoTitle.text = self.filterArray[indexPath.row]
         } else {
-            cell.memoTitle.text = row.title
-            cell.memoContent.text = row.content
-            cell.registrationDate.text = format.string(from: row.registDate)
+            if indexPath.section == 0 {
+                if let sectionZeroRow = tasks?.filter("favorite = true")[indexPath.row] {
+                    cell.memoTitle.text = sectionZeroRow.title
+                    cell.memoContent.text = sectionZeroRow.content
+                    cell.registrationDate.text = format.string(from: sectionZeroRow.registDate)
+                }
+            } else {
+                let sectionOneRow = tasks.filter("favorite = false")[indexPath.row]
+                cell.memoTitle.text = sectionOneRow.title
+                cell.memoContent.text = sectionOneRow.content
+                cell.registrationDate.text = format.string(from: sectionOneRow.registDate)
+            }
         }
         
         return cell
@@ -105,14 +115,18 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let favoriteTasks = tasks[indexPath.row]
-        
         if indexPath.section == 0 {
             let favoriteAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
                 if indexPath.section == 0 {
                     try! self.localRealm.write {
-                        favoriteTasks.favorite = !favoriteTasks.favorite
-                        self.mainTableView.reloadData()
+                        let sectionZeroRow = self.tasks.filter("favorite = true")
+                        
+                        if sectionZeroRow.count <= 5 {
+                            sectionZeroRow[indexPath.row].favorite = !sectionZeroRow[indexPath.row].favorite
+                            self.mainTableView.reloadData()
+                        } else {
+                            self.alert(title: "5개 이상 노노", message: "추가할 수 없습니다", actionTitle: "확인")
+                        }
                     }
                 }
             })
@@ -124,7 +138,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             let favoriteAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
                 if indexPath.section == 1 {
                     try! self.localRealm.write {
-                        favoriteTasks.favorite = !favoriteTasks.favorite
+                        let sectionOneRow = self.tasks.filter("favorite = false")[indexPath.row]
+                        sectionOneRow.favorite = !sectionOneRow.favorite
                         self.mainTableView.reloadData()
                     }
                 }
