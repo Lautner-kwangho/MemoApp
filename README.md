@@ -26,4 +26,4 @@
 ![Hnet com-image](https://user-images.githubusercontent.com/80211277/141400605-2c1e4caa-990c-43a1-8dbd-c9cac3609c09.gif) | width="200"
 ![Hnet-image](https://user-images.githubusercontent.com/80211277/141400610-f08c8097-b769-4cdd-8341-ddee6e18ab79.gif) | width="200"
 
-<img src="![Hnet com-image](https://user-images.githubusercontent.com/80211277/141400605-2c1e4caa-990c-43a1-8dbd-c9cac3609c09.gif)" width="200"/>
+<img src="(https://user-images.githubusercontent.com/80211277/141400605-2c1e4caa-990c-43a1-8dbd-c9cac3609c09.gif)" width="200"/>
