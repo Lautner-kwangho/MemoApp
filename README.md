@@ -23,5 +23,5 @@
 # 
 ## 시뮬레이터 화면
 ### 주말에 다시 다 뜯어봐야겠어요...
-![Hnet com-image]<img src="https://user-images.githubusercontent.com/80211277/141400605-2c1e4caa-990c-43a1-8dbd-c9cac3609c09.gif" width="200">
-![Hnet-image]<img src="https://user-images.githubusercontent.com/80211277/141400610-f08c8097-b769-4cdd-8341-ddee6e18ab79.gif" width="200">
+<img src="https://user-images.githubusercontent.com/80211277/141400605-2c1e4caa-990c-43a1-8dbd-c9cac3609c09.gif" width="300">
+<img src="https://user-images.githubusercontent.com/80211277/141400610-f08c8097-b769-4cdd-8341-ddee6e18ab79.gif" width="300">
