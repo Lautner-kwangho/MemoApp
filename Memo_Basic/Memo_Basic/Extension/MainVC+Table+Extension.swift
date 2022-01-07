@@ -131,7 +131,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
                 }
             })
             favoriteAction.image = UIImage(systemName: "pin.slash.fill")
-            favoriteAction.backgroundColor = #colorLiteral(red: 0.996542871, green: 0.6290633082, blue: 0, alpha: 1)
+            favoriteAction.backgroundColor = #colorLiteral(red: 1, green: 0.5165689517, blue: 0.5729488503, alpha: 1)
             
             return UISwipeActionsConfiguration(actions: [favoriteAction])
         } else {
